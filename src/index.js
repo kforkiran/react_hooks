@@ -1,16 +1,14 @@
 import React, { Profiler } from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
-import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import HelloWorld from "./helloworld";
-import Profile from "./Profile";
 import 'bulma/css/bulma.min.css'  ;
+import UseStateExample from "./react-hooks/UseStateExample";
 
 
 ReactDOM.render(
   <React.StrictMode>
-    <HelloWorld></HelloWorld>
+    <UseStateExample></UseStateExample>
   </React.StrictMode>,
   document.getElementById("root")
 );
