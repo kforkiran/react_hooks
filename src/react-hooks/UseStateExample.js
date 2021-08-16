@@ -2,15 +2,13 @@ import { useState } from "react";
 
 const UseStateExample = function(){
    
-    const [buttonType, setButtonType] = useState("is-primary");
-    useState(()=>{
-        setButtonType("button is-primary");
-    },[]);
+    const [buttonType,setButtonType] = useState(()=> {
+        return "button is-info";
+    }); 
 
     const setNewButtonType = () => {
-         let  type = buttonType === "button is-info" ? "button is-primary" : "button is-info";
+          const type = buttonType === "button is-info" ? "button is-primary" : "button is-info";
           setButtonType(type);
-          console.log(type);
     }
 
     return (
