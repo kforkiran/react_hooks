@@ -19,7 +19,7 @@ const UseEffectExample = () => {
     };
 
     const pauseCounter = () => {
-        setState();
+        setActive(false);
     };
 
     const resetCounter = () => {
@@ -28,10 +28,11 @@ const UseEffectExample = () => {
     };
 
     return (
-        <div>
+        <div whiteSpace="pre-line">
             <span>{state}</span>
           <span> <button className="button is-primary" onClick={() => startCounter()}>Start</button></span>
           <span><button className="button is-primary" onClick={()=>resetCounter()}>Reset</button></span>
+          <span><button className="button is-primary" onClick={() => pauseCounter()}>Pause</button></span>
         </div>
     );
  }
