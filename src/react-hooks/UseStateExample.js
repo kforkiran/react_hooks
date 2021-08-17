@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const UseStateExample = function(){
+const UseStateExample = () => {
    
     const [buttonType,setButtonType] = useState(()=> {
         return "button is-info";
