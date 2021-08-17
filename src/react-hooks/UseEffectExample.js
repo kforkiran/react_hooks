@@ -6,9 +6,11 @@ const UseEffectExample = () => {
     const[isActive, setActive] = useState(false);
 
     useEffect(() => {
+        let intervalId;
         if(isActive){
-            setTimeout(() => setState(state + 1),1000);
+            intervalId= setTimeout(() => setState(state + 1),1000);
         }
+        return () => clearTimeout(intervalId);
     },[state,isActive]);
 
     const startCounter = () => {
